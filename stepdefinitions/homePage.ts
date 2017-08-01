@@ -6,18 +6,21 @@ let expect = chai.expect;
 
 defineSupportCode(function ({ Given }) {
     Given(/^I am on google page$/, async () => {
-        //STEP LOGIC GOES HERE
+        await expect(browser.getTitle()).to.eventually.equal('Google');
     });
     
     When(/^I type "(.*?)"$/, async (text) => {
-        //STEP LOGIC GOES HERE
+        let searchBox = $("input[name='q']");
+        await searchBox.sendKeys(text);
     });
 
     Then(/^I click on search button$/, async () => {
-        //STEP LOGIC GOES HERE
+        let searchButton = $("input[value='Google Search']");
+        await searchButton.click();
     });
     
     Then(/^I clear the search text$/, async () => {
-        //STEP LOGIC GOES HERE
+        let searchBox = $("input[name='q']");
+        searchBox.clear();
     });
 })
