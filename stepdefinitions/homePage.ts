@@ -8,18 +8,18 @@ defineSupportCode(function ({ Given }) {
     let search: SearchPageObject = new SearchPageObject();
 
     Given(/^I am on google page$/, async () => {
-        await expect(browser.getTitle()).to.eventually.equal('Google');
+        //STEP LOGIC GOES HERE
     });
     
     When(/^I type "(.*?)"$/, async (text) => {
-        await search.searchTextBox.sendKeys(text);
+        //STEP LOGIC GOES HERE
     });
 
     Then(/^I click on search button$/, async () => {
-        await search.searchButton.click();
+        //STEP LOGIC GOES HERE
     });
     
     Then(/^I clear the search text$/, async () => {
-        await search.searchTextBox.clear();
+        //STEP LOGIC GOES HERE
     });
 })
