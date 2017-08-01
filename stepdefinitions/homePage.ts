@@ -5,8 +5,6 @@ let chai = require('chai').use(require('chai-as-promised'));
 let expect = chai.expect;
 
 defineSupportCode(function ({ Given }) {
-    let search: SearchPageObject = new SearchPageObject();
-
     Given(/^I am on google page$/, async () => {
         //STEP LOGIC GOES HERE
     });
